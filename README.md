@@ -3,31 +3,17 @@
 The following is a list of certain syntax used in the RDBMS SQLite. 
 
 # Clauses 
-    GROUP BY (aggregate)
-    LIMIT
-    ORDER BY
-    WHERE (non-aggregate)
-# Aggregate Functions
-    AVG
-    COUNT
-    SUM
+    CREATE VIEW
+    CASE
 # String Functions
     CONCATENATION
-    STRFTIME
-    UPPER
+    LOWER
 # Other Functions
-    ROUND
+    REPLACE
 # Joins
     INNER JOIN
-# Comparison Operators
-    =
-    >=
-    <=
-# Logical Operators
-    AND
 # Conventions
     tablename.FieldName
     JOIN ON foreignkey.dimensiontable = primarykey.facttable   
 # Other Syntax
     Alias
-    SELECT subquery
