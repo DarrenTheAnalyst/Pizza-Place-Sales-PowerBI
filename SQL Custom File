@@ -1,0 +1,75 @@
+1. Create a view for the tables order_details (od) and orders (o).
+
+CREATE VIEW vw_od_o
+
+AS 
+
+SELECT
+
+--order_details (od)
+od.order_details_id,
+od.order_id,
+od.pizza_id,
+
+CASE
+  WHEN od.quantity = 5 THEN od.quantity/5
+  WHEN od.quantity = 4 THEN od.quantity/4
+  WHEN od.quantity = 3 THEN od.quantity/3
+  WHEN od.quantity = 2 THEN od.quantity/2
+  WHEN od.quantity = 1 THEN od.quantity/1
+  ELSE 0
+  END
+  AS [quantity],
+
+--orders (o)
+o.order_id,
+o.date,
+o.time
+
+FROM
+	order_details_dirty od 
+	INNER JOIN orders_dirty_to_clean o ON od.order_id = o.order_id;
+
+2. Create a view for the tables pizzas (p) and pizza_types (pt).
+
+CREATE VIEW vw_p_pt
+
+AS
+
+SELECT
+
+--pizzas (p) dirty table
+p.pizza_type_id ||'_'|| lower(p.size) AS [pizza_id],
+p.pizza_type_id,
+lower(p.size) AS [size],
+replace(p.price,'$','') AS [price],
+
+--pizza_types (pt) clean table
+pt.pizza_type_id,
+pt.name,
+pt.category,
+pt.ingredients
+
+FROM
+	pizzas_dirty p
+	INNER JOIN pizza_types pt ON p.pizza_type_id = pt.pizza_type_id;
+
+3. Create a view for all 4 clean tables.
+
+CREATE VIEW vw_all_pizza_tables
+
+AS
+
+SELECT *
+
+FROM
+
+vw_od_o od
+
+INNER JOIN
+
+vw_p_pt ppt
+
+ON
+
+od.pizza_id = ppt.pizza_id;
