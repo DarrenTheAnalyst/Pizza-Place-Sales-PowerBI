@@ -2,7 +2,7 @@
 
 For this Power BI project, I chose to clean and transform the dataset in Power Query. The Pizza_Place_Sales_Process document describes my overall approach. 
 
-I have included views in the 'SQL Custom File' in order to illustrate that this is another way to get the dataset into Power BI. This is an extension of the repository 'Pizza-Place-Sales-Data-Cleaning-In-SQL'   
+I have included views in the 'SQL Custom File' as another way to get the dataset into Power BI. This is an extension of the repository 'Pizza-Place-Sales-Data-Cleaning-In-SQL'   
 
 # Pizza-Place-Sales-View-For-PowerBI
 
