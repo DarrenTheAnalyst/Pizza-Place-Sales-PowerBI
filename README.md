@@ -1,4 +1,4 @@
-# Pizza-Place-Sales-Process
+# Pizza-Place-Sales-PowerBI
 
 For this Power BI project, I chose to clean and transform the dataset in Power Query. The Pizza_Place_Sales_Process document describes my overall approach. 
 
