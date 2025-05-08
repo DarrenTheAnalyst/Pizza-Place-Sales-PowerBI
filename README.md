@@ -1,6 +1,6 @@
 # Pizza-Place-Sales-PowerBI
 
-For this Power BI project, I chose to clean and transform the dataset in Power Query. The Pizza_Place_Sales_Process document describes my approach. 
+For this Power BI project, I chose to transform the dataset in Power Query. The Pizza_Place_Sales_Process document describes my approach. 
 
 The Power BI project involved using the following data skills: transformation, automation, modeling, visualization. 
 
@@ -22,7 +22,7 @@ The following is a list of certain syntax used in the RDBMS SQLite.
     INNER JOIN
 # Conventions
     tablename.FieldName
-    JOIN ON foreignkey.dimensiontable = primarykey.facttable   
+    JOIN ON facttable.foreignkey = dimensiontable.primarykey   
 # Other Syntax
     Alias
 
